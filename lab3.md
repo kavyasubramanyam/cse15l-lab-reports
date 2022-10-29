@@ -3,9 +3,9 @@
 ## **Part 1**
 Search Engine Class implementation: 
 
-    import java.io.IOException;
-    import java.net.URI;
-    import java.util.*;
+        import java.io.IOException;
+        import java.net.URI;
+        import java.util.*;
 
 
             class Handler implements URLHandler {
@@ -78,7 +78,7 @@ Inputs and Outputs:
 
 ![Image](arrayunittest.png)
 
-2. In the List Example class, I wrote a test to check the merge function. I hypothesised that the failure would occur when two identical lists of length 3 were merged. I wrote the test to compare the expected output vs the actual output, and even though my test compiled it did not run and produce an output in terminal. 
+2. In the List Example class, I wrote a test to check the merge function. I hypothesised that the failure would occur when two lists, one of length 3 and one of length 2 were merged. I wrote the test to compare the expected output vs the actual output, and the test resulted in an "out of memory" java heap error. The symptom came from the line that compares the two arrays at the an index. The second list is checked at the second index but since the first list does not have a second index, it results in an error. The fix to this bug would be to set a max index value of the size of the array - 1 so that the function never checks for an index that does not exist. 
 
 ![Image](bug2function.png)
 ![Image](bug2output.png)
