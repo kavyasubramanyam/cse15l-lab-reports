@@ -1,4 +1,4 @@
-# **Lab 3**
+# **Lab 2**
 
 ## **Part 1**
 Search Engine Class implementation: 
